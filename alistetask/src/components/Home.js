@@ -90,8 +90,8 @@ const Home = () => {
                             <thead>
                                 <tr>
                                     <th>HomeId</th>
-                                    <th>User Name</th>
-                                    <th>User Id</th>
+                                    <th>User_Name</th>
+                                    <th>User_Id</th>
                                 </tr>
                             </thead>
                             <tbody>
