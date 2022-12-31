@@ -2,24 +2,35 @@
 .header{
     margin-left: 40%;
 }
+.Subheader{
+    margin-left: 20%;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
 .card
 {
     
     /* border:1px solid black; */
+    border: none;
     width: 20%;
     margin-left: 32%;
+    
 }
 .searchContainer{
     /* border: 1px solid blue; */
+    
     width: 30%;
     margin-left: 5%;
 }
 .searchdiv{
     display: flex;
     justify-content: space-around;
+    height: 35px;
 }
 .container{
     display: flex;
     width: 100%;
     /* border: 1px solid gold; */
+}
+.tablediv{
+    margin-top: 10%;
 }
