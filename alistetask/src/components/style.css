@@ -1,0 +1,25 @@
+
+.header{
+    margin-left: 40%;
+}
+.card
+{
+    
+    /* border:1px solid black; */
+    width: 20%;
+    margin-left: 32%;
+}
+.searchContainer{
+    /* border: 1px solid blue; */
+    width: 30%;
+    margin-left: 5%;
+}
+.searchdiv{
+    display: flex;
+    justify-content: space-around;
+}
+.container{
+    display: flex;
+    width: 100%;
+    /* border: 1px solid gold; */
+}
