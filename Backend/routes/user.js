@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router();
 const userDetails = require('../models/home');
+const axios = require('axios');
 
 router.get('/getuser/:homeId',async(req,res)=>{
     try {
@@ -36,7 +37,7 @@ router.post('/saveuser',async(req,res)=>{
 
         const saveUser = await users.save()
         res.json(saveUser)
-    }
+        }
         
         // res.json(data);
     } catch (error) {
@@ -56,5 +57,6 @@ router.delete('/deleteuser/:homeId/:id',async(req,res)=>{
         
     }
 })
+
 
 module.exports = router
