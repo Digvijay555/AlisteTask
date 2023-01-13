@@ -294,10 +294,10 @@ module.exports = (layout) => {
                         <td class='Invoice-detail-cell' style="text-align: center;">1</td>
                         
                         {
-                            layout?.isFirstInvoice === true ?
-                            <td class='Invoice-detail-cell' style="text-align: left;">Automation -${layout?.planFrequency}<span style="font-weight: lighter;"><br />Charges for this duration (from ${moment(layout?.InstalledDate).format('L')} to ${moment(date).format('L')} )</span></td> :
-                            <td class='Invoice-detail-cell' style="text-align: left;">${layout?.additionalInfo[0].description}</td>
-                            
+                            ${layout?.isFirstInvoice === true ?
+                            `<td class='Invoice-detail-cell' style="text-align: left;">Automation -${layout?.planFrequency}<span style="font-weight: lighter;"><br />Charges for this duration (from ${moment(layout?.InstalledDate).format('L')} to ${moment(date).format('L')} )</span></td>`:
+                            `<td class='Invoice-detail-cell' style="text-align: left;">${layout?.additionalInfo[0].description}</td>`
+                            }
                         }
 
                         <td class='Invoice-detail-cell' style="text-align: left;">85365090</td>
@@ -308,9 +308,9 @@ module.exports = (layout) => {
                         <td class='Invoice-detail-cell'>${layout?.isFirstInvoice === true ? (Number(layout?.finalCalculatedRecursiveAmount * 1.18).toFixed(2)) : layout?.amount}</td>
                     </tr>
                     {
-                        layout?.isFirstInvoice === true ?
-                            <>
-                                <tr>
+                        ${layout?.isFirstInvoice === true ?
+                            `<>
+                               <tr>
                                     <td class='Invoice-detail-cell' style="text-align: center;">2</td>
                                     <td class='Invoice-detail-cell' style="text-align: left;">Installation</td>
                                     <td class='Invoice-detail-cell' style="text-align: left;"></td>
@@ -330,7 +330,8 @@ module.exports = (layout) => {
                                     <td class='Invoice-detail-cell'></td>
                                     <td class='Invoice-detail-cell'>${layout?.finalCalculatedSecurity.toFixed(2)}</td>
                                 </tr>
-                            </> : null
+                            </>` :null
+                        }
                     }
                 </table>
             </div>
